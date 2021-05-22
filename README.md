@@ -1,6 +1,6 @@
 # vaccipy
-[![build-windows](https://github.com/iamnotturner/vaccipy/actions/workflows/build_windows.yaml/badge.svg?branch=master)](https://github.com/iamnotturner/vaccipy/actions/workflows/build_windows.yaml)
-[![build-linux-64](https://github.com/iamnotturner/vaccipy/actions/workflows/build_linux.yaml/badge.svg)](https://github.com/iamnotturner/vaccipy/actions/workflows/build_linux.yaml)
+[![build](https://github.com/iamnotturner/vaccipy/actions/workflows/build.yaml/badge.svg?branch=master)](https://github.com/iamnotturner/vaccipy/actions/workflows/build.yaml)
+[![build-linux-64](https://github.com/iamnotturner/vaccipy/actions/workflows/deploy.yaml/badge.svg)](https://github.com/iamnotturner/vaccipy/actions/workflows/deploy.yaml)
 
 Automatisierte Impfterminbuchung auf [www.impfterminservice.de](https://www.impfterminservice.de/).</br>
 
@@ -13,12 +13,7 @@ wo, egal für wen!
 * **🌟 NEU:** [Beta Branch (neue, aber noch nicht final getestete Features)](https://github.com/iamnotturner/vaccipy/tree/beta)
 </br></br>
 
-<a href="https://cntr.click/9ypzBLb">
-<img width="180" height="60" src="https://www.laughingbirdsoftware.com/wp-content/uploads/2020/07/Download-for-Windows-Button.png">
-</a>
-<a href="https://cntr.click/6Q0PXkK">
-<img width="180" heigth="60"src=https://logos-world.net/wp-content/uploads/2020/11/Ubuntu-Emblem.png>
-</a>
+[Letzten Build herunterladen](https://github.com/iamnotturner/vaccipy/releases/latest)
 
 ## Shoutout an:
 
@@ -30,7 +25,7 @@ wo, egal für wen!
 
 ## Ausgangssituation
 
-Unsere Großeltern möchten sich gerne impfen lassen, aber telefonsich unter 116117 kommen sie nicht durch und das Internet
+Unsere Großeltern möchten sich gerne impfen lassen, aber telefonisch unter 116117 kommen sie nicht durch und das Internet
 ist auch noch immer irgendwie Neuland. Jetzt kommt es zum Konflikt: einerseits möchte man natürlich gerne bei der Terminbuchung helfen,
 andererseits hat man aber auch keine Lust, deshalb nun den ganzen Tag vor dem Computer zu hocken und die Seite zu aktualisieren...
 
@@ -146,8 +141,11 @@ Um den Buildprozess zu vereinfachen gibt es verschiedene Buildpipelines, welche 
 Die pipelines sind im `.github/workflows` Ordner zu finden. 
 
 Aktuelle Pipelines:
-- [x] [Windows Build-Pipeline](https://github.com/iamnotturner/vaccipy/actions/workflows/build_windows.yaml)
-- [x] [Linux 64 Build-Pipeline](https://github.com/iamnotturner/vaccipy/actions/workflows/build_linux.yaml)
+- [x] [Build Pipeline für Windows und Ubuntu](https://github.com/iamnotturner/vaccipy/actions/workflows/build.yaml)
+- [x] [Release Pipeline](https://github.com/iamnotturner/vaccipy/actions/workflows/release.yaml)
+
+Die Release-pipeline baut bei Tags im Format "v*" und baut automatisch die Anwendung für Windows und Ubuntu, und stellt sie dann
+als Github Release zum Download zur Verfügung.
 
 #### Generell
 
@@ -194,7 +192,7 @@ werden (von uns oder euch - feel free!) irgendwann hinzukommen:
 - [ ] Github Pages
 - [ ] Macosx Build / Pipeline (Mac currently blocks the app: [Branch](https://github.com/iamnotturner/vaccipy/tree/mac-intel-build))
 - [ ] Code Zertifikate für Windows (gegen Virusmeldung)
-- [ ] Artifacts, Packages und Releases
+- [x] Artifacts, Packages und Releases
 
 ## Das kann vaccipy NICHT - und wird es auch nie können
 
